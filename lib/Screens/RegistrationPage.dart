@@ -218,22 +218,21 @@ class _RegistrationState extends State<Registration> {
                                                     BorderRadius.circular(
                                                         20.0)))),
                                     onPressed: () {
-                                      if(formKey.currentState!.validate()){
-                                          FireBaseRealtime.insertValue(context,
-                                              name: nameController.text,
-                                              email: emailController.text,
-                                              pass: passwordController.text,
-                                              phoneNumber: phoneController.text);
-                                          Navigator.push(context,
-                                              MaterialPageRoute(
-                                                  builder: (BuildContext context)=>LoginPage()));
-                                        };
-
-
-                                      },
-
-
-
+                                      if (formKey.currentState!.validate()) {
+                                        FireBaseRealtime.insertValue(context,
+                                            name: nameController.text,
+                                            email: emailController.text,
+                                            pass: passwordController.text,
+                                            phoneNumber: phoneController.text);
+                                        Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder:
+                                                    (BuildContext context) =>
+                                                        LoginPage()));
+                                      }
+                                      ;
+                                    },
                                     child: const Text(
                                       'SIGN UP',
                                       style: TextStyle(

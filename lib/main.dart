@@ -8,25 +8,19 @@ import 'Screens/MyAccount.dart';
 import 'Screens/Offers.dart';
 import 'Screens/RegistrationPage.dart';
 
-void main()async{
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-runApp(
-    MaterialApp(
-      debugShowCheckedModeBanner: false,
-        home:LoginPage()
-        )
-    );
+  runApp(MaterialApp(debugShowCheckedModeBanner: false, home: LoginPage()));
 }
 
 class DashBoard extends StatefulWidget {
-
   @override
   State<DashBoard> createState() => _DashBoardState();
 }
+
 int currentPageIndex = 0;
 List<Widget> screen = [HomeScreen(), Offers(), ContactUs(), MyAccount()];
-
 
 class _DashBoardState extends State<DashBoard> {
   @override
@@ -57,7 +51,6 @@ class _DashBoardState extends State<DashBoard> {
                 icon: Icon(Icons.person_pin_rounded), label: 'MyAccount')
           ],
         ),
-      body:screen[currentPageIndex]
-    );
+        body: screen[currentPageIndex]);
   }
 }
