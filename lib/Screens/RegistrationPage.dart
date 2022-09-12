@@ -6,7 +6,6 @@ import 'LoginPage.dart';
 
 class Registration extends StatefulWidget {
   const Registration({Key? key}) : super(key: key);
-
   @override
   State<Registration> createState() => _RegistrationState();
 }
